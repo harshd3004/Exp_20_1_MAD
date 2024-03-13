@@ -1,12 +1,11 @@
 package com.example.exp_20_1_mad;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
 
 public class MainActivity extends AppCompatActivity {
     Button btnOn,btnOff;
@@ -19,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         btnOff = (Button) findViewById(R.id.offBtn);
 
         btnOn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 startService(new Intent(MainActivity.this,WifiService.class));
@@ -31,5 +31,6 @@ public class MainActivity extends AppCompatActivity {
                 stopService(new Intent(MainActivity.this,WifiService.class));
             }
         });
+
     }
 }
